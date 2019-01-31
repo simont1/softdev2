@@ -1,3 +1,8 @@
+// Simon Tsui 
+// SoftDev2 pd7
+// K0  I see a Red Door
+// 2019-01-31
+
 var canvas = document.getElementById("slate");
 var ctx = canvas.getContext("2d");
 var rect = true;
