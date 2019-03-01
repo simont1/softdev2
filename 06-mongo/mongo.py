@@ -1,5 +1,3 @@
-
-45 lines (44 sloc) 1.51 KB
 #Team OrangeOranges: Dennis Chen & Simon Tsui
 #SoftDev pd7
 #K #06: Yummy Mongo Py
@@ -45,7 +43,8 @@ def zipScore(zip,score):
 zipScore('10462',6)
 def rCat(cat, bor, score):
     rests = []
-    for rest in collection.find( { "$and": [{"cuisine": cat}, {"borough": bor}, {"grades.1.score": { "lt" : score}}] )}:
+    #finds restaurants that have a certain cuisine in a certain borough with a score below what's given
+    for rest in collection.find( { "$and": [{"cuisine": cat}, {"borough": bor}, {"grades.1.score": { "$lt" : score}}]}):
         rests.append(rest['name'])
     print(rests)
     return rests
