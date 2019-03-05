@@ -5,7 +5,7 @@
 import pymongo
 from pymongo import MongoClient
 client = MongoClient()
-SERVER_ADDR = "204.48.19.94"
+SERVER_ADDR = "68.183.28.31"
 connection = MongoClient(SERVER_ADDR)
 db = connection.test
 collection = db.restaurants
@@ -13,7 +13,7 @@ def rBoroughs(bor):
     restaurants = []
     #finds restaurants that have the same borough as the parameter
     for restaurant in collection.find({"borough": bor}):
-        restaurants.append([restaurant["name"])
+        restaurants.append(restaurant["name"])
     print(restaurants)
     return restaurants
 rBoroughs("Bronx")
