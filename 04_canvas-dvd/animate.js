@@ -76,7 +76,7 @@ var drawDvd = function () {
     clear();
     var logo = new Image();
     logo.src = "logo_dvd.jpg";
-    ctx.drawImage(logo, dvdXY[0], dvdXY[1], 100, 100);
+    ctx.drawImage(logo, dvdXY[0], dvdXY[1], 75, 50);
     //drawCircle(dvdXY[0], dvdXY[1], 10);
     dvdXY[0] += dvdVeloc[0];
     dvdXY[1] += dvdVeloc[1];

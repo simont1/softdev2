@@ -1,0 +1,11 @@
+UC_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+p = "MyNoobPassword1234"
+#print([x for x in p if x in UC_LETTERS])
+#[1 for x in p if x in UC_LETTERS]
+#[1 if x in UC_LETTERS else 0 for x in p]
+
+def hasUpperandLower(p):
+    temp = [1 for x in p if x in UC_LETTERS]
+    return(temp.length() > 0)
+
+print(hasUpperandLower(p))

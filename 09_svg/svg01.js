@@ -4,7 +4,7 @@
 //2019-03-13w
 
 
-ar pic = document.getElementById("vimage");
+var pic = document.getElementById("vimage");
 var button = document.getElementById("but_clear");
 
 var lastx = -1;
