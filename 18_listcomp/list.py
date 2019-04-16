@@ -1,3 +1,8 @@
+#Simon Tsui
+#Softdev2 pd7
+#K18 -- Getting Clever with List Comprehensions
+#2019-04-16t
+
 def pyTriples(a):
     arr = []
     for m in range(1, a):
