@@ -32,8 +32,11 @@ print(symmetricDifference(arr1,arr2))
 def cartesianProduct(a,b):
     return [(r,c) for r in a for c in b]#all possible tuple combinations of sets a and b
 print(cartesianProduct(arr1,arr2))
+print(cartesianProduct(arr3,arr4))
 
-def newmethod(a, b):
-    return[r*c for r in a for c in b]
 
-print(newmethod(arr3, arr4))
+def addition(a, b):#adds two sets assuming both are the same length
+    return [a[i] + b[i] for i in range(len(a))]
+
+print(addition(arr1,arr2))
+
