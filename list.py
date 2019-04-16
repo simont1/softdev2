@@ -3,8 +3,9 @@
 
 arr1 = [1, 2, 3]
 arr2 = [2, 3, 4]
-arr3 = [4, 5, 6]
-arr4 = [2, 4, 6]
+arr3 = [4, 5, 6, 7, 8]
+arr4 = [2, 4, 6, 8, 10]
+
 #Union of sets A and B {1, 2, 3} & {2, 3, 4} --> {1, 2, 3, 4}
 
 def union(a, b):
@@ -32,3 +33,7 @@ def cartesianProduct(a,b):
     return [(r,c) for r in a for c in b]#all possible tuple combinations of sets a and b
 print(cartesianProduct(arr1,arr2))
 
+def newmethod(a, b):
+    return[r*c for r in a for c in b]
+
+print(newmethod(arr3, arr4))
