@@ -61,7 +61,7 @@ def fourA():
 
 def fourB():
     primes = primeList()
-    arr = [i if not primes[i]  else -1 for i in range(2, 101) ]
+    arr = [i for i in range(2, 101) if not primes[i]]
     while -1 in arr:
         arr.remove(-1)
     return arr
@@ -78,7 +78,7 @@ def fiveA():
 
 def fiveB():
     primes = primeList()
-    arr = [i if primes[i] else -1 for i in range(2, 101) ]
+    arr = [i for i in range(2, 101) if primes[i]]
     while -1 in arr:
         arr.remove(-1)
     return arr
@@ -91,7 +91,7 @@ def sixA(x):
     return arr
 
 def sixB(x):
-    arr = [i if x % i == 0 else -1 for i in range(1, x + 1)]
+    arr = [i for i in range(1, x + 1) if x % i == 0 ]
     while -1 in arr:
         arr.remove(-1)
     return arr
