@@ -1,0 +1,31 @@
+import random
+
+def make_HTML_heading(f):
+    txt = f()
+    def inner():
+        return "<h1>" + txt + "</h1>"
+    return inner
+
+#equiv to greet = makeHTMLheading(greet)
+@make_HTML_heading
+def greet():
+    greetings = ["Hello", "Welcome", "Ayo!", "Hola", "Bonjour", "Word up"]
+    return random.choice(greetings)
+
+#print(greet())
+
+#greet_heading = make_HTML_heading(greet)
+#print(greet_heading())
+
+def memo(x):
+    fib_memo = [0, 1]
+    def fib(n):
+        if(n < len(fib_memo)):
+            return fib_memo[n]
+        else:
+            fib_memo.append(fib(n-1) + fib(n-2))
+            print(fib_memo)
+            return fib_memo[n]
+    return fib(x)
+
+print(memo(10))
